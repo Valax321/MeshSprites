@@ -7,9 +7,14 @@ using UnityEngine.Serialization;
 
 namespace Valax321.MeshSprites
 {
+    /// <summary>
+    /// Sprite with full lighting and shadow support.
+    /// </summary>
     [DisallowMultipleComponent]
     [RequireComponent(typeof(MeshRenderer))]
     [RequireComponent(typeof(MeshFilter))]
+    [AddComponentMenu("Valax321/Mesh Sprite")]
+    [HelpURL("https://github.com/Valax321/MeshSprites/blob/master/Documentation~/index.md")]
     public class MeshSprite : MonoBehaviour
     {
         private static class ShaderProps
@@ -25,6 +30,9 @@ namespace Valax321.MeshSprites
 
         #region Public stuff
         
+        /// <summary>
+        /// The sprite currently assigned to this renderer.
+        /// </summary>
         public Sprite sprite
         {
             get => m_sprite;
@@ -40,6 +48,9 @@ namespace Valax321.MeshSprites
             }
         }
 
+        /// <summary>
+        /// The tint color of this renderer.
+        /// </summary>
         public Color color
         {
             get => m_color;
