@@ -1,0 +1,18 @@
+{
+    "name": "Valax321.MeshSprites.Editor",
+    "rootNamespace": "Valax321.MeshSprites.Editor",
+    "references": [
+        "GUID:19b4f05a500b076499de5c2c10d95443"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
