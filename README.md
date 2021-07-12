@@ -1,4 +1,5 @@
 ﻿# Unity Mesh Sprites
+ [![openupm](https://img.shields.io/npm/v/com.valax321.meshsprites?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.valax321.meshsprites/)
 
 A mesh rendering solution for Unity that allows for the use of full lighting on sprites. This is achieved by rendering the sprites via MeshRenderers instead of SpriteRenderers.
 
