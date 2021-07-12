@@ -7,7 +7,7 @@
   "category": "Rendering",
   "license": "MIT",
   "homepage": "https://github.com/Valax321/MeshSprites",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "unity": "2019.4",
   "description": "Component for sprite rendering via mesh renderers. Allows for full unity lighting on sprites.",
   "keywords": [
