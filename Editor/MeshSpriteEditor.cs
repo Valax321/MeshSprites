@@ -81,5 +81,17 @@ namespace Valax321.MeshSprites.Editor
             if (EditorGUI.EndChangeCheck())
                 serializedObject.ApplyModifiedProperties();
         }
+        
+        #if UNITY_EDITOR
+        [MenuItem("GameObject/3D Object/Mesh Sprite", false, 0)]
+        static void CreateNewMeshSprite(MenuCommand menuCommand)
+        {
+            GameObject go = new GameObject("Mesh Sprite");
+            go.AddComponent<MeshSprite>();
+            GameObjectUtility.SetParentAndAlign(go, menuCommand.context as GameObject);
+            Undo.RegisterCreatedObjectUndo(go, "Create " + go.name);
+            Selection.activeObject = go;
+        }
+        #endif
     }
 }
