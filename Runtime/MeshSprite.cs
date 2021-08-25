@@ -40,8 +40,19 @@ namespace Valax321.MeshSprites
             {
                 if (value != m_sprite)
                 {
-                    GenerateMeshForSprite(m_filter, value);
-                    UpdateProps(m_renderer, value, m_propBlock);
+                    if (Application.isPlaying)
+                    {
+                        GenerateMeshForSprite(m_filter, value);
+                        UpdateProps(m_renderer, value, m_propBlock);
+                    }
+                    else
+                    {
+                        GenerateMeshForSprite(GetComponent<MeshFilter>(), value);
+                        var mPropBlock = new MaterialPropertyBlock();
+                        var meshRenderer = GetComponent<MeshRenderer>();
+                        meshRenderer.GetPropertyBlock(mPropBlock);
+                        UpdateProps(meshRenderer, value, mPropBlock);
+                    }
                 }
 
                 m_sprite = value;
